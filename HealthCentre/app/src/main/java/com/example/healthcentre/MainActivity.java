@@ -9,11 +9,12 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText username = (EditText)findViewById(R.id.username);
-    EditText password = (EditText)findViewById(R.id.password);
+    EditText usernameCheck ,passwordCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        passwordCheck = (EditText)findViewById(R.id.password);
+        usernameCheck = (EditText)findViewById(R.id.username);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
@@ -31,9 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        if (username.getText().toString().equals("admin") && password.getText().toString().equals("5T5ptQ")){
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivityForResult (intent,0);
-        }
+        Intent intent = new Intent(getApplicationContext(), Welcome.class);
+        startActivityForResult (intent,0);
     }
 }
