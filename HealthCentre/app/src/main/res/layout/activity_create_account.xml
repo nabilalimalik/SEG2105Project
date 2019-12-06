@@ -13,7 +13,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="400px" />
+            android:layout_height="350px" />
 
         <TextView
             android:id="@+id/title"
